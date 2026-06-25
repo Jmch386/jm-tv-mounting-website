@@ -2,7 +2,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = Path(r"C:\Users\jmch3\OneDrive\Desktop\TV Logo.png")
+SOURCE = Path(r"C:\Users\jmch3\OneDrive\Desktop\New Logo.png")
 BRAND = ROOT / "public" / "brand"
 PUBLIC = ROOT / "public"
 OUT = ROOT / "outputs"
