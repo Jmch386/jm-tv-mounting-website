@@ -17,7 +17,7 @@ export function GalleryGrid() {
           <button
             key={item}
             onClick={() => setCategory(item)}
-            className={`shrink-0 rounded-lg border px-4 py-2 text-sm font-extrabold transition ${category === item ? "border-neon bg-neon text-ink" : "border-white/10 bg-white/[.045] text-white hover:border-neon/60"}`}
+            className={`shrink-0 rounded-lg border px-4 py-2 text-sm font-extrabold transition ${category === item ? "border-neon bg-neon text-white" : "border-white/10 bg-white/[.045] text-white hover:border-neon/60"}`}
           >
             {item}
           </button>

@@ -2,7 +2,7 @@
   <rect width="900" height="650" fill="#111"/>
   <rect x="60" y="430" width="780" height="160" rx="12" fill="#2D2D2D"/>
   <rect x="135" y="375" width="630" height="80" rx="8" fill="#202020"/>
-  <rect x="270" y="110" width="360" height="230" rx="10" fill="#050505" stroke="#7CFF00" stroke-width="7"/>
-  <rect x="420" y="347" width="60" height="10" fill="#7CFF00"/>
+  <rect x="270" y="110" width="360" height="230" rx="10" fill="#050505" stroke="#006DFF" stroke-width="7"/>
+  <rect x="420" y="347" width="60" height="10" fill="#006DFF"/>
   <text x="450" y="585" text-anchor="middle" font-family="Montserrat, Arial" font-size="28" font-weight="700" fill="#fff">Bedrooms</text>
 </svg>

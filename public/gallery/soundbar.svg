@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-label="Soundbar installation placeholder">
   <rect width="900" height="650" fill="#111"/>
-  <rect x="210" y="120" width="480" height="270" rx="10" fill="#050505" stroke="#7CFF00" stroke-width="7"/>
-  <rect x="285" y="420" width="330" height="34" rx="17" fill="#2D2D2D" stroke="#7CFF00" stroke-width="3"/>
-  <circle cx="325" cy="437" r="6" fill="#7CFF00"/>
-  <circle cx="575" cy="437" r="6" fill="#7CFF00"/>
+  <rect x="210" y="120" width="480" height="270" rx="10" fill="#050505" stroke="#006DFF" stroke-width="7"/>
+  <rect x="285" y="420" width="330" height="34" rx="17" fill="#2D2D2D" stroke="#006DFF" stroke-width="3"/>
+  <circle cx="325" cy="437" r="6" fill="#006DFF"/>
+  <circle cx="575" cy="437" r="6" fill="#006DFF"/>
   <text x="450" y="585" text-anchor="middle" font-family="Montserrat, Arial" font-size="28" font-weight="700" fill="#fff">Soundbars</text>
 </svg>

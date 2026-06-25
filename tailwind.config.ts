@@ -5,7 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        neon: "#7CFF00",
+        neon: "#006DFF",
+        brandHover: "#0052CC",
         ink: "#111111",
         charcoal: "#2D2D2D"
       },
@@ -15,7 +16,7 @@ const config: Config = {
       },
       boxShadow: {
         premium: "0 20px 60px rgba(0,0,0,.35)",
-        glow: "0 0 0 1px rgba(124,255,0,.22), 0 20px 55px rgba(124,255,0,.08)"
+        glow: "0 0 0 1px rgba(0,109,255,.28), 0 20px 55px rgba(0,109,255,.12)"
       }
     }
   },

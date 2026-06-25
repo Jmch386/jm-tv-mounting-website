@@ -55,7 +55,7 @@ export function FloatingCallButton() {
   return (
     <a
       href={brand.phoneHref}
-      className={`fixed bottom-3 left-4 right-4 z-50 flex min-h-12 items-center justify-center gap-3 rounded-lg bg-neon px-5 py-3 text-sm font-extrabold text-ink shadow-glow transition duration-200 hover:-translate-y-0.5 sm:bottom-5 sm:left-auto sm:right-5 sm:min-h-14 sm:w-auto ${showMobileButton && !formInView ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
+      className={`fixed bottom-3 left-4 right-4 z-50 flex min-h-12 items-center justify-center gap-3 rounded-lg bg-neon px-5 py-3 text-sm font-extrabold text-white shadow-glow transition duration-200 hover:-translate-y-0.5 hover:bg-brandHover sm:bottom-5 sm:left-auto sm:right-5 sm:min-h-14 sm:w-auto ${showMobileButton && !formInView ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
       aria-label={`Call JM TV Mounting at ${brand.phone}`}
     >
       <Phone size={19} />

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-label="Fireplace TV installation placeholder">
   <rect width="900" height="650" fill="#111"/>
-  <rect x="220" y="105" width="460" height="260" rx="10" fill="#050505" stroke="#7CFF00" stroke-width="7"/>
+  <rect x="220" y="105" width="460" height="260" rx="10" fill="#050505" stroke="#006DFF" stroke-width="7"/>
   <rect x="170" y="395" width="560" height="135" rx="8" fill="#2D2D2D"/>
   <rect x="255" y="430" width="390" height="75" rx="4" fill="#050505"/>
-  <path d="M430 500c-30-45 35-55 7-105 50 35 80 71 54 105z" fill="#7CFF00"/>
+  <path d="M430 500c-30-45 35-55 7-105 50 35 80 71 54 105z" fill="#006DFF"/>
   <text x="450" y="585" text-anchor="middle" font-family="Montserrat, Arial" font-size="28" font-weight="700" fill="#fff">Fireplaces</text>
 </svg>

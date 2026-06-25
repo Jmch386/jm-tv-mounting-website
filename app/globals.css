@@ -7,7 +7,8 @@
 :root {
   --font-bebas: "Bebas Neue";
   --font-montserrat: "Montserrat";
-  --neon: #7CFF00;
+  --neon: #006DFF;
+  --brand-hover: #0052CC;
   --ink: #111111;
   --charcoal: #2D2D2D;
 }
@@ -94,7 +95,7 @@ textarea {
 
 .field:focus {
   border-color: var(--neon);
-  box-shadow: 0 0 0 3px rgba(124,255,0,.13);
+  box-shadow: 0 0 0 3px rgba(0,109,255,.16);
 }
 
 .field option {
@@ -117,13 +118,13 @@ textarea {
 
 .btn-primary {
   background: var(--neon);
-  color: #111111;
+  color: #ffffff;
 }
 
 .btn-secondary {
-  border: 1px solid rgba(124,255,0,.55);
+  border: 1px solid rgba(0,109,255,.65);
   color: white;
-  background: rgba(124,255,0,.08);
+  background: rgba(0,109,255,.12);
 }
 
 .btn-ghost {
@@ -136,6 +137,15 @@ textarea {
 .btn-secondary:hover,
 .btn-ghost:hover {
   transform: translateY(-1px);
+}
+
+.btn-primary:hover {
+  background: var(--brand-hover);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-hover);
+  background: rgba(0,82,204,.2);
 }
 
 .asset-card {
