@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, MessageSquare, Phone, ShieldCheck, Star, Timer, Wrench } from "lucide-react";
-import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BookingForm } from "@/components/BookingForm";
 import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteCalculator } from "@/components/QuoteCalculator";
@@ -98,12 +97,6 @@ export default function HomePage() {
       <Section eyebrow="Calculator" title="Instant quote estimate.">
         <QuoteCalculator />
       </Section>
-
-      <section className="section-band">
-        <Section eyebrow="Before / After" title="Slide to compare the finish.">
-          <BeforeAfterSlider />
-        </Section>
-      </section>
 
       <Section eyebrow="Gallery" title="Real installs, cleaner layout.">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
