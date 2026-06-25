@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MapPin, Phone, ShieldCheck, Star, Timer, Wrench } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, MessageSquare, Phone, ShieldCheck, Star, Timer, Wrench } from "lucide-react";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BookingForm } from "@/components/BookingForm";
 import { HeroLogo } from "@/components/HeroLogo";
@@ -22,7 +22,8 @@ export default function HomePage() {
               Clean, secure, perfectly leveled TV installations for Boca Raton, Coconut Creek, Coral Springs, Parkland, Deerfield Beach, and Pompano Beach.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={brand.phoneHref} className="btn-primary"><Phone size={18} /> Call or Text</a>
+              <a href={brand.phoneHref} className="btn-primary"><Phone size={18} /> Call Now</a>
+              <a href={brand.textHref} className="btn-secondary"><MessageSquare size={18} /> Text Us</a>
               <a href="#quote" className="btn-secondary">Get a Free Quote <ArrowRight size={18} /></a>
             </div>
             <div className="mt-7 grid gap-3 text-sm font-bold text-white/75 sm:grid-cols-3">

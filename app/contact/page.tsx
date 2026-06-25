@@ -15,7 +15,7 @@ export default function ContactPage() {
       <Section eyebrow="Contact" title="Call, text, or request a quote.">
         <div className="grid gap-4 md:grid-cols-3">
           <a className="rounded-lg border border-white/10 bg-white/[.045] p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
-          <a className="rounded-lg border border-white/10 bg-white/[.045] p-6" href={brand.textHref}><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
+          <a className="rounded-lg border border-white/10 bg-white/[.045] p-6" href={brand.textHref}><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
           <a className="rounded-lg border border-white/10 bg-white/[.045] p-6" href={brand.emailHref}><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.email}</p></a>
         </div>
       </Section>

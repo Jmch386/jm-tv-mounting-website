@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, MessageSquare, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { brand, navItems } from "@/lib/content";
 
@@ -31,7 +31,11 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a href={brand.phoneHref} className="btn-secondary">
             <Phone size={18} />
-            {brand.phone}
+            Call Now
+          </a>
+          <a href={brand.textHref} className="btn-primary">
+            <MessageSquare size={18} />
+            Text Us
           </a>
         </div>
 
@@ -50,7 +54,11 @@ export function Header() {
           </nav>
           <a href={brand.phoneHref} className="btn-primary w-full">
             <Phone size={18} />
-            Call or Text {brand.phone}
+            Call Now
+          </a>
+          <a href={brand.textHref} className="btn-secondary w-full">
+            <MessageSquare size={18} />
+            Text Us
           </a>
         </div>
       )}
