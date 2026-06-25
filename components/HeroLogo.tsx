@@ -12,7 +12,7 @@ export function HeroLogo() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .55, ease: "easeOut" }}
     >
-      <Image src={brand.logo} alt="JM TV Mounting & Installation official logo" width={720} height={720} className="h-auto w-full rounded-lg object-contain" priority />
+      <Image src={brand.logo} alt="JM TV Mounting & Installation official logo" width={1200} height={900} className="h-auto w-full rounded-lg object-contain" priority />
     </motion.div>
   );
 }

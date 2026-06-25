@@ -13,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/88 backdrop-blur-xl">
       <div className="container-px mx-auto flex h-20 max-w-7xl items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3" aria-label="JM TV Mounting home">
-          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={74} height={74} className="h-14 w-14 rounded-full object-contain" priority />
+          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={220} height={165} className="h-12 w-28 rounded-md object-contain sm:w-36" priority />
           <span className="hidden text-sm font-extrabold uppercase leading-tight tracking-wide sm:block">
             JM TV Mounting<br /><span className="text-neon">& Installation</span>
           </span>

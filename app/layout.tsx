@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Clean, secure, perfectly leveled TV installations across Boca Raton, Coconut Creek, Coral Springs, Parkland, Deerfield Beach, and Pompano Beach.",
     url: "https://jmtvmounting.com",
     siteName: brand.name,
-    images: [{ url: "/brand/jm-tv-logo.png", width: 1200, height: 1200 }],
+    images: [{ url: "/brand/og-logo.png", width: 1200, height: 900 }],
     locale: "en_US",
     type: "website"
   },

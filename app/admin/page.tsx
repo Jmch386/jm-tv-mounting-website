@@ -26,7 +26,7 @@ export default function AdminPage() {
     return (
       <section className="container-px mx-auto grid min-h-[70vh] max-w-xl place-items-center py-16">
         <form className="w-full rounded-lg border border-white/10 bg-white/[.045] p-7 text-center" onSubmit={(event) => { event.preventDefault(); setUnlocked(true); }}>
-          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={110} height={110} className="mx-auto mb-5 h-24 w-24 rounded-full object-contain" />
+          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={280} height={210} className="mx-auto mb-5 h-auto w-48 rounded-md object-contain" />
           <Lock className="mx-auto mb-4 text-neon" />
           <h1 className="headline text-5xl">Admin Dashboard</h1>
           <p className="mt-3 text-sm leading-6 text-white/62">Secure dashboard interface for quotes, customers, jobs, invoices, payments, photos, reviews, notes, and statuses.</p>
