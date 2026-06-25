@@ -24,10 +24,10 @@ export function GalleryGrid() {
         ))}
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {visibleGallery.map((item) => (
-          <button key={`${item.category}-${item.title}`} onClick={() => setActive(item)} className="group overflow-hidden rounded-lg border border-white/10 bg-white/[.045] text-left shadow-premium">
-            <div className="relative aspect-[4/5] w-full bg-black sm:aspect-[4/3]">
+          <button key={`${item.category}-${item.title}`} onClick={() => setActive(item)} className="group overflow-hidden rounded-lg border border-white/10 bg-white/[.045] text-left shadow-premium transition hover:-translate-y-1 hover:border-neon/45">
+            <div className="relative aspect-[4/5] w-full bg-black">
               <Image
                 src={item.thumb}
                 alt={item.title}

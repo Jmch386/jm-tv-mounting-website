@@ -1,25 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Phone, ShieldCheck, Star, Timer, Wrench } from "lucide-react";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BookingForm } from "@/components/BookingForm";
 import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteCalculator } from "@/components/QuoteCalculator";
 import { QuoteForm } from "@/components/QuoteForm";
+import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
-import { brand, gallery, pricing, services, testimonials } from "@/lib/content";
+import { brand, gallery, pricing, priorityCities, serviceDetails, testimonials, trustItems } from "@/lib/content";
 
 export default function HomePage() {
   return (
     <>
       <section className="premium-grid relative overflow-hidden border-b border-white/10 bg-ink">
-        <div className="container-px mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 py-12 lg:grid-cols-[1fr_460px]">
+        <div className="container-px mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 py-12 md:py-18 lg:grid-cols-[1fr_460px]">
           <div className="max-w-4xl">
             <p className="mb-4 text-sm font-extrabold uppercase tracking-wide text-neon">South Florida TV mounting specialists</p>
-            <h1 className="headline text-6xl text-white sm:text-7xl md:text-8xl lg:text-9xl">Professional TV Mounting & Wire Concealment</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">Clean, secure, perfectly leveled TV installations throughout South Florida.</p>
+            <h1 className="headline text-6xl text-white sm:text-7xl md:text-8xl lg:text-9xl">Premium TV Mounting & Wire Concealment</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
+              Clean, secure, perfectly leveled TV installations for Boca Raton, Coconut Creek, Coral Springs, Parkland, Deerfield Beach, and Pompano Beach.
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={brand.phoneHref} className="btn-primary"><Phone size={18} /> Call or Text</a>
               <a href="#quote" className="btn-secondary">Get a Free Quote <ArrowRight size={18} /></a>
+            </div>
+            <div className="mt-7 grid gap-3 text-sm font-bold text-white/75 sm:grid-cols-3">
+              <span className="flex items-center gap-2"><ShieldCheck className="text-neon" size={18} /> Secure mounting</span>
+              <span className="flex items-center gap-2"><Wrench className="text-neon" size={18} /> Clean installs</span>
+              <span className="flex items-center gap-2"><Timer className="text-neon" size={18} /> Same-day availability</span>
             </div>
             <p className="mt-6 font-heading text-5xl text-neon">{brand.phone}</p>
           </div>
@@ -27,12 +36,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section eyebrow="Services" title="Clean installs, premium finish.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
-            <div key={service} className="rounded-lg border border-white/10 bg-white/[.045] p-5">
-              <CheckCircle2 className="mb-5 text-neon" />
-              <h3 className="font-bold">{service}</h3>
+      <Section eyebrow="Why JM TV" title="A cleaner wall, a safer mount, a better room.">
+        <div className="grid gap-4 md:grid-cols-4">
+          {trustItems.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.04}>
+              <div className="premium-card h-full p-5">
+                <CheckCircle2 className="mb-5 text-neon" />
+                <h3 className="font-heading text-3xl">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/65">{item.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      <section className="section-band">
+        <Section eyebrow="Services" title="Specialized installation services.">
+          <div className="grid gap-4 md:grid-cols-2">
+            {serviceDetails.map((service, index) => (
+              <Reveal key={service.title} delay={index * 0.05}>
+                <article className="premium-card h-full p-6">
+                  <h3 className="font-heading text-4xl">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/68">{service.text}</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {service.tags.map((tag) => <span key={tag} className="rounded-md border border-neon/30 bg-neon/10 px-3 py-1 text-xs font-extrabold text-neon">{tag}</span>)}
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      </section>
+
+      <Section eyebrow="Local service" title="TV mounting near you.">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {priorityCities.map((city) => (
+            <div key={city} className="premium-card flex items-center gap-3 p-4">
+              <MapPin className="shrink-0 text-neon" size={20} />
+              <div>
+                <h3 className="font-bold">TV Mounting {city}</h3>
+                <p className="mt-1 text-xs text-white/55">Mounting, wire concealment, soundbar install, and setup.</p>
+              </div>
             </div>
           ))}
         </div>
@@ -54,13 +98,19 @@ export default function HomePage() {
         <QuoteCalculator />
       </Section>
 
-      <Section eyebrow="Gallery" title="Organized by install type.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      <section className="section-band">
+        <Section eyebrow="Before / After" title="Slide to compare the finish.">
+          <BeforeAfterSlider />
+        </Section>
+      </section>
+
+      <Section eyebrow="Gallery" title="Real installs, cleaner layout.">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {gallery.map((item) => (
-            <Link key={item.category} href="/gallery" className="group overflow-hidden rounded-lg border border-white/10 bg-white/[.045]">
-              <Image src={item.image} alt={item.title} width={640} height={440} className="aspect-[4/3] w-full object-cover transition group-hover:scale-105" />
+            <Link key={`${item.category}-${item.title}`} href="/gallery" className="group overflow-hidden rounded-lg border border-white/10 bg-white/[.045] shadow-premium">
+              <Image src={item.thumb} alt={item.title} width={720} height={960} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-105 sm:aspect-[4/3]" />
               <div className="p-4">
-                <p className="font-bold">{item.category}</p>
+                <p className="text-xs font-extrabold uppercase text-neon">{item.category}</p>
                 <p className="mt-1 text-xs text-white/58">{item.title}</p>
               </div>
             </Link>
@@ -72,9 +122,11 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           {testimonials.map((review) => (
             <div key={review.name} className="rounded-lg border border-white/10 bg-black/35 p-6">
-              <p className="text-xl text-neon">★★★★★</p>
+              <div className="flex gap-1 text-neon" aria-label="Five star review">
+                {Array.from({ length: 5 }).map((_, index) => <Star key={index} fill="currentColor" size={18} />)}
+              </div>
               <p className="mt-5 leading-7 text-white/74">&quot;{review.quote}&quot;</p>
-              <p className="mt-5 text-sm font-extrabold">{review.name} · {review.city}</p>
+              <p className="mt-5 text-sm font-extrabold">{review.name} - {review.city}</p>
             </div>
           ))}
         </div>

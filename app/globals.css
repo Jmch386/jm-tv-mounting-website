@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -25,6 +26,9 @@ body {
   background: #111111;
   color: #ffffff;
   font-family: var(--font-montserrat), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 4.5rem;
 }
 
 a {
@@ -48,6 +52,19 @@ textarea {
   font-family: var(--font-bebas), sans-serif;
   letter-spacing: 0;
   line-height: .92;
+}
+
+.section-band {
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+}
+
+.premium-card {
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.045);
+  box-shadow: 0 18px 55px rgba(0,0,0,.28);
 }
 
 .premium-grid {

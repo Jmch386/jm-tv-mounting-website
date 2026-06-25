@@ -28,6 +28,29 @@ export const services = [
   "Home Theater Setup"
 ];
 
+export const serviceDetails = [
+  {
+    title: "TV Mounting",
+    text: "Secure mounting, clean height planning, stud verification, leveling, and a final safety check for bedrooms, living rooms, offices, and media walls.",
+    tags: ["Stud checked", "Perfectly leveled", "Clean finish"]
+  },
+  {
+    title: "Wire Concealment",
+    text: "Low-profile wire routing for a cleaner wall, including external raceways and in-wall concealment options where the wall allows it.",
+    tags: ["No messy cables", "Paintable raceways", "In-wall options"]
+  },
+  {
+    title: "Soundbar Installation",
+    text: "Aligned soundbar mounting under or above the TV with thoughtful cable routing and setup for a cleaner audio experience.",
+    tags: ["Centered audio", "Tidy wiring", "$65 install"]
+  },
+  {
+    title: "Home Theater Setup",
+    text: "TV setup, streaming devices, shelves, consoles, and home theater basics finished with a premium walkthrough before leaving.",
+    tags: ["Streaming setup", "Shelf installs", "Room-ready"]
+  }
+];
+
 export const pricing = [
   { title: "Up to 55\"", price: "$125", note: "Standard TV mounting" },
   { title: "65\"-75\"", price: "$175", note: "Large-format TV mounting" },
@@ -50,6 +73,22 @@ export const cities = [
   "Tamarac",
   "Lighthouse Point",
   "Fort Lauderdale"
+];
+
+export const priorityCities = [
+  "Boca Raton",
+  "Coconut Creek",
+  "Coral Springs",
+  "Parkland",
+  "Deerfield Beach",
+  "Pompano Beach"
+];
+
+export const trustItems = [
+  { title: "Clean installs", text: "Low-clutter work areas, tidy cable paths, and a polished finished wall." },
+  { title: "Secure mounting", text: "Mount placement is checked for structure, viewing height, and level alignment." },
+  { title: "Same-day availability", text: "Fast appointment windows when the schedule allows, especially for local jobs." },
+  { title: "Insured on request", text: "Ask for current insurance details before your appointment if documentation is needed." }
 ];
 
 export const testimonials = [
