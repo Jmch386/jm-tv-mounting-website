@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-label="Wire concealment placeholder">
+  <rect width="900" height="650" fill="#111"/>
+  <rect x="210" y="115" width="480" height="270" rx="10" fill="#050505" stroke="#7CFF00" stroke-width="7"/>
+  <path d="M450 395v95" stroke="#7CFF00" stroke-width="12" stroke-linecap="round"/>
+  <rect x="360" y="490" width="180" height="26" rx="13" fill="#2D2D2D"/>
+  <path d="M310 440c42 35 94 35 140 0 46-35 96-35 140 0" fill="none" stroke="#fff" stroke-width="4" opacity=".35"/>
+  <text x="450" y="585" text-anchor="middle" font-family="Montserrat, Arial" font-size="28" font-weight="700" fill="#fff">Wire Concealment</text>
+</svg>
