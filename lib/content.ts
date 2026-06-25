@@ -3,8 +3,8 @@ export const brand = {
   phone: "561-663-3072",
   phoneHref: "tel:5616633072",
   textHref: "sms:5616633072",
-  email: "jmtvmounting@gmail.com",
-  emailHref: "mailto:jmtvmounting@gmail.com",
+  email: "jmch386@gmail.com",
+  emailHref: "mailto:jmch386@gmail.com",
   logo: "/brand/jm-tv-logo.png"
 };
 
