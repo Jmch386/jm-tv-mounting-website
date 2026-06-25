@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <>
       <section className="border-b border-white/10 bg-ink">
-        <div className="container-px mx-auto grid max-w-7xl items-center gap-10 py-12 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(320px,440px)]">
-          <div className="max-w-3xl">
+        <div className="container-px mx-auto grid max-w-7xl items-center gap-0 py-6 pb-12 md:gap-10 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(320px,440px)]">
+          <div className="order-2 max-w-3xl lg:order-1">
             <p className="mb-4 text-sm font-extrabold uppercase tracking-wide text-neon">South Florida TV mounting</p>
             <h1 className="headline text-5xl text-white sm:text-6xl md:text-7xl">
               Professional TV Mounting & Wire Concealment
@@ -30,7 +30,9 @@ export default function HomePage() {
               <span className="flex items-center gap-2"><CheckCircle2 className="text-neon" size={18} /> Hidden wires</span>
             </div>
           </div>
-          <HeroLogo />
+          <div className="order-1 mb-8 lg:order-2 lg:mb-0">
+            <HeroLogo />
+          </div>
         </div>
       </section>
 
