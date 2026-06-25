@@ -19,47 +19,48 @@ export const navItems = [
 
 export const services = [
   "TV Mounting",
-  "Wire Concealment",
-  "In-Wall Wire Kits",
   "Soundbar Installation",
-  "Floating Shelf Installation",
-  "TV Setup",
-  "Streaming Device Setup",
-  "Home Theater Setup"
+  "Wire Concealment",
+  "Home Theater Setup",
+  "Smart Home Setup"
 ];
 
 export const serviceDetails = [
   {
     title: "TV Mounting",
-    text: "Secure mounting, clean height planning, stud verification, leveling, and a final safety check for bedrooms, living rooms, offices, and media walls.",
-    tags: ["Stud checked", "Perfectly leveled", "Clean finish"]
-  },
-  {
-    title: "Wire Concealment",
-    text: "Low-profile wire routing for a cleaner wall, including external raceways and in-wall concealment options where the wall allows it.",
-    tags: ["No messy cables", "Paintable raceways", "In-wall options"]
+    text: "Secure wall mounting with clean height planning, stud verification, leveling, and a final safety check.",
+    tags: ["Stud checked", "Leveled", "Secure"]
   },
   {
     title: "Soundbar Installation",
-    text: "Aligned soundbar mounting under or above the TV with thoughtful cable routing and setup for a cleaner audio experience.",
-    tags: ["Centered audio", "Tidy wiring", "$65 install"]
+    text: "Aligned soundbar mounting under or above the TV with tidy setup and cable routing.",
+    tags: ["Centered audio", "Clean setup", "$65"]
+  },
+  {
+    title: "Wire Concealment",
+    text: "External raceway and in-wall concealment options for a cleaner, finished room.",
+    tags: ["Hidden wires", "Raceways", "In-wall options"]
   },
   {
     title: "Home Theater Setup",
-    text: "TV setup, streaming devices, shelves, consoles, and home theater basics finished with a premium walkthrough before leaving.",
-    tags: ["Streaming setup", "Shelf installs", "Room-ready"]
+    text: "TV setup, streaming devices, shelves, consoles, and room-ready home theater basics.",
+    tags: ["Streaming", "Shelves", "Room-ready"]
+  },
+  {
+    title: "Smart Home Setup",
+    text: "Simple setup support for streaming devices, remotes, Wi-Fi-connected accessories, and everyday TV controls.",
+    tags: ["Devices", "Remotes", "Walkthrough"]
   }
 ];
 
 export const pricing = [
-  { title: "Up to 55\"", price: "$125", note: "Standard TV mounting" },
-  { title: "65\"-75\"", price: "$175", note: "Large-format TV mounting" },
-  { title: "85\"+", price: "$225", note: "Oversized TV mounting" },
-  { title: "Full Motion Mount", price: "+$50", note: "Articulating mount setup" },
-  { title: "Soundbar Installation", price: "$65", note: "Clean, centered audio install" },
-  { title: "External Wire Concealment", price: "$75", note: "Paintable channel routing" },
-  { title: "In-Wall Wire Concealment", price: "From $150", note: "Hidden cable kit install" },
-  { title: "Shelf Installation", price: "From $50", note: "Floating shelf installation" }
+  { title: "TVs up to 55\"", price: "$125", note: "Standard TV mounting" },
+  { title: "TVs 65\"-75\"", price: "$175", note: "Large-format TV mounting" },
+  { title: "TVs 85\"+", price: "$225", note: "Oversized TV mounting" },
+  { title: "Full motion mount", price: "+$50", note: "Articulating mount setup" },
+  { title: "Soundbar installation", price: "$65", note: "Clean, centered audio install" },
+  { title: "Wire concealment", price: "$75", note: "External raceway routing" },
+  { title: "In-wall wire concealment", price: "Starting at $150", note: "Hidden cable kit install" }
 ];
 
 export const cities = [

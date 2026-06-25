@@ -9,6 +9,8 @@
   --font-montserrat: "Montserrat";
   --neon: #006DFF;
   --brand-hover: #0052CC;
+  --silver: #C0C0C0;
+  --soft-silver: #E5E5E5;
   --ink: #111111;
   --charcoal: #2D2D2D;
 }
@@ -29,7 +31,13 @@ body {
   font-family: var(--font-montserrat), sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 5.25rem;
+  padding-bottom: 4.75rem;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 a {
@@ -58,34 +66,29 @@ textarea {
 .section-band {
   border-top: 1px solid rgba(255,255,255,.08);
   border-bottom: 1px solid rgba(255,255,255,.08);
-  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+  background: rgba(255,255,255,.025);
 }
 
 .premium-card {
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(192,192,192,.16);
   border-radius: .5rem;
-  background: rgba(255,255,255,.045);
-  box-shadow: 0 18px 55px rgba(0,0,0,.28);
+  background: rgba(255,255,255,.04);
 }
 
 .premium-grid {
-  background-image:
-    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background: #111111;
 }
 
 .glass {
   background: rgba(17, 17, 17, .78);
-  border: 1px solid rgba(255,255,255,.1);
-  backdrop-filter: blur(18px);
+  border: 1px solid rgba(192,192,192,.16);
 }
 
 .field {
   width: 100%;
   min-height: 3rem;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(192,192,192,.18);
+  background: rgba(255,255,255,.05);
   color: white;
   border-radius: .5rem;
   padding: .85rem .95rem;
@@ -113,7 +116,7 @@ textarea {
   border-radius: .5rem;
   padding: .8rem 1.15rem;
   font-weight: 800;
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  transition: border-color .18s ease, background .18s ease, color .18s ease;
 }
 
 .btn-primary {
@@ -128,15 +131,9 @@ textarea {
 }
 
 .btn-ghost {
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid rgba(192,192,192,.18);
   color: white;
   background: rgba(255,255,255,.05);
-}
-
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-ghost:hover {
-  transform: translateY(-1px);
 }
 
 .btn-primary:hover {
@@ -146,6 +143,11 @@ textarea {
 .btn-secondary:hover {
   border-color: var(--brand-hover);
   background: rgba(0,82,204,.2);
+}
+
+.btn-ghost:hover {
+  border-color: rgba(229,229,229,.42);
+  background: rgba(255,255,255,.08);
 }
 
 .asset-card {

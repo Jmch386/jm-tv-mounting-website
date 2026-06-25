@@ -13,8 +13,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/88 backdrop-blur-xl">
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 md:h-20 md:gap-4">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="JM TV Mounting home">
-          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={220} height={165} className="h-12 w-28 rounded-md object-contain sm:w-36" priority />
-          <span className="hidden text-sm font-extrabold uppercase leading-tight tracking-wide md:block">
+          <Image src="/brand/icon-only.png" alt="JM TV Mounting & Installation logo" width={220} height={220} className="h-11 w-11 rounded-md object-contain sm:h-12 sm:w-12" priority />
+          <span className="text-sm font-extrabold uppercase leading-tight tracking-wide text-white">
             JM TV Mounting<br /><span className="text-neon">& Installation</span>
           </span>
         </Link>
@@ -25,7 +25,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/admin" className="hover:text-neon">Admin</Link>
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -46,20 +45,22 @@ export function Header() {
       {open && (
         <div className="container-px border-t border-white/10 pb-5 lg:hidden">
           <nav className="grid gap-2 py-4 text-sm font-bold">
-            {[...navItems, { label: "Admin", href: "/admin" }].map((item) => (
+            {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="rounded-lg px-3 py-3 hover:bg-white/8" onClick={() => setOpen(false)}>
                 {item.label}
               </Link>
             ))}
           </nav>
-          <a href={brand.phoneHref} className="btn-primary w-full">
-            <Phone size={18} />
-            Call Now
-          </a>
-          <a href={brand.textHref} className="btn-secondary w-full">
-            <MessageSquare size={18} />
-            Text Us
-          </a>
+          <div className="grid gap-3">
+            <a href={brand.phoneHref} className="btn-primary w-full">
+              <Phone size={18} />
+              Call Now
+            </a>
+            <a href={brand.textHref} className="btn-secondary w-full">
+              <MessageSquare size={18} />
+              Text Us
+            </a>
+          </div>
         </div>
       )}
     </header>

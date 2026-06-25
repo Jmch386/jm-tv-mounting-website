@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { BackToTopButton } from "@/components/BackToTopButton";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -66,7 +65,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
         <Header />
         <main>{children}</main>
-        <BackToTopButton />
         <FloatingCallButton />
         <Footer />
       </body>

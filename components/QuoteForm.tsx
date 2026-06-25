@@ -67,7 +67,7 @@ export function QuoteForm() {
   }
 
   return (
-    <form id="quote" data-hide-floating-call className="grid gap-3 rounded-lg border border-white/10 bg-white/[.045] p-4 pb-24 sm:p-5 md:gap-4 lg:pb-5" encType="multipart/form-data" onSubmit={handleSubmit}>
+    <form data-hide-floating-call className="grid gap-3 rounded-lg border border-white/10 bg-white/[.045] p-4 pb-20 sm:p-5 md:gap-4 lg:pb-5" encType="multipart/form-data" onSubmit={handleSubmit}>
       <input type="hidden" name="_subject" value="New JM TV Mounting quote request" />
       <input type="hidden" name="recipient_email" value="jmch386@gmail.com" />
       <div className="grid gap-3 md:gap-4 lg:grid-cols-3">
