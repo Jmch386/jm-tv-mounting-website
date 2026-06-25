@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       <section className="premium-grid relative overflow-hidden border-b border-white/10 bg-ink">
-        <div className="container-px mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-8 py-7 pb-12 md:min-h-[calc(100vh-5rem)] md:gap-12 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(520px,580px)] xl:grid-cols-[minmax(0,1fr)_minmax(560px,620px)]">
+        <div className="container-px mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-8 py-7 pb-12 md:min-h-[calc(100vh-5rem)] md:gap-10 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(400px,460px)] xl:grid-cols-[minmax(0,1fr)_minmax(440px,500px)]">
           <div className="order-2 max-w-4xl lg:order-1">
             <p className="mb-3 text-sm font-extrabold uppercase tracking-wide text-neon md:mb-4">South Florida TV mounting specialists</p>
             <h1 className="headline text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl">Premium TV Mounting & Wire Concealment</h1>
@@ -32,7 +32,7 @@ export default function HomePage() {
             </div>
             <p className="mt-6 font-heading text-5xl text-neon">{brand.phone}</p>
           </div>
-          <div className="order-1 mb-1 lg:order-2 lg:mb-0 lg:-translate-y-12 xl:-translate-y-16">
+          <div className="order-1 mb-4 lg:order-2 lg:mb-0 lg:self-start lg:pt-10 xl:pt-8">
             <HeroLogo />
           </div>
         </div>
