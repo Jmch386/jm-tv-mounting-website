@@ -42,8 +42,8 @@ export function BookingForm() {
   }
 
   return (
-    <div className="rounded-lg border border-white/10 bg-black/35 p-5">
-      <div className="mb-5 flex items-center gap-3">
+    <div data-hide-floating-call className="rounded-lg border border-white/10 bg-black/35 p-4 pb-24 sm:p-5 lg:pb-5">
+      <div className="mb-4 flex items-center gap-3 md:mb-5">
         <CalendarCheck className="text-neon" />
         <h3 className="font-heading text-4xl">Online Booking</h3>
       </div>
@@ -53,7 +53,7 @@ export function BookingForm() {
         </p>
       ) : (
         <form
-          className="grid gap-4 md:grid-cols-2"
+          className="grid gap-3 md:gap-4 lg:grid-cols-2"
           encType="multipart/form-data"
           onSubmit={handleSubmit}
         >
@@ -94,7 +94,7 @@ export function BookingForm() {
             <option>Not sure</option>
           </select>
 
-          <input className="field" name="preferred_date" required type="date" aria-label="Preferred date" />
+          <input className="field" name="preferred_date" required type="text" placeholder="MM/DD/YYYY" inputMode="numeric" pattern="[0-9/]*" aria-label="Preferred date" />
           <select className="field" name="preferred_time" required defaultValue="">
             <option value="" disabled>Preferred time</option>
             <option>Morning</option>
@@ -103,20 +103,20 @@ export function BookingForm() {
             <option>First available</option>
           </select>
 
-          <textarea className="field min-h-28 md:col-span-2" name="message" placeholder="Message or install details" />
-          <label className="field flex cursor-pointer items-center gap-3 text-white/70 md:col-span-2">
-            <Upload size={18} />
+          <textarea className="field min-h-28 lg:col-span-2" name="message" placeholder="Message or install details" />
+          <label className="field flex cursor-pointer items-center gap-3 text-white/70 lg:col-span-2">
+            <Upload size={18} className="shrink-0" />
             Photos if included
             <input type="file" name="attachment" accept="image/*" multiple className="hidden" />
           </label>
 
           {error && (
-            <p className="rounded-lg border border-red-400/30 bg-red-500/10 p-4 text-sm font-bold text-red-200 md:col-span-2">
+            <p className="rounded-lg border border-red-400/30 bg-red-500/10 p-4 text-sm font-bold text-red-200 lg:col-span-2">
               {error}
             </p>
           )}
 
-          <button className="btn-secondary md:col-span-2" type="submit" disabled={submitting}>
+          <button className="btn-secondary lg:col-span-2" type="submit" disabled={submitting}>
             {submitting ? "Sending request..." : "Request Appointment"}
           </button>
         </form>

@@ -67,10 +67,10 @@ export function QuoteForm() {
   }
 
   return (
-    <form id="quote" className="grid gap-4 rounded-lg border border-white/10 bg-white/[.045] p-5" encType="multipart/form-data" onSubmit={handleSubmit}>
+    <form id="quote" data-hide-floating-call className="grid gap-3 rounded-lg border border-white/10 bg-white/[.045] p-4 pb-24 sm:p-5 md:gap-4 lg:pb-5" encType="multipart/form-data" onSubmit={handleSubmit}>
       <input type="hidden" name="_subject" value="New JM TV Mounting quote request" />
       <input type="hidden" name="recipient_email" value="jmch386@gmail.com" />
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-3 md:gap-4 lg:grid-cols-3">
         <input className="field" name="name" required placeholder="Name" />
         <input className="field" name="phone" required placeholder="Phone" type="tel" />
         <input className="field" name="email" required placeholder="Email" type="email" />
@@ -79,18 +79,18 @@ export function QuoteForm() {
         <select className="field" name="wall_type" required defaultValue=""><option value="" disabled>Wall Type</option><option>Drywall</option><option>Concrete</option><option>Brick</option><option>Fireplace</option></select>
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-4 text-sm font-bold"><input type="checkbox" checked={options.needMount} onChange={(event) => setOptions((current) => ({ ...current, needMount: event.target.checked }))} /> Need Mount?</label>
-        <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-4 text-sm font-bold"><input type="checkbox" checked={options.needSoundbar} onChange={(event) => setOptions((current) => ({ ...current, needSoundbar: event.target.checked }))} /> Need Soundbar?</label>
-        <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-4 text-sm font-bold"><input type="checkbox" checked={options.needWireConcealment} onChange={(event) => setOptions((current) => ({ ...current, needWireConcealment: event.target.checked }))} /> Need Wire Concealment?</label>
-        <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-4 text-sm font-bold"><input type="checkbox" checked={options.needInWallKit} onChange={(event) => setOptions((current) => ({ ...current, needInWallKit: event.target.checked }))} /> Need In-Wall Kit?</label>
+        <label className="flex min-h-12 items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-3 text-sm font-bold"><input type="checkbox" className="h-4 w-4 shrink-0 accent-neon" checked={options.needMount} onChange={(event) => setOptions((current) => ({ ...current, needMount: event.target.checked }))} /> Need Mount?</label>
+        <label className="flex min-h-12 items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-3 text-sm font-bold"><input type="checkbox" className="h-4 w-4 shrink-0 accent-neon" checked={options.needSoundbar} onChange={(event) => setOptions((current) => ({ ...current, needSoundbar: event.target.checked }))} /> Need Soundbar?</label>
+        <label className="flex min-h-12 items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-3 text-sm font-bold"><input type="checkbox" className="h-4 w-4 shrink-0 accent-neon" checked={options.needWireConcealment} onChange={(event) => setOptions((current) => ({ ...current, needWireConcealment: event.target.checked }))} /> Need Wire Concealment?</label>
+        <label className="flex min-h-12 items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-3 text-sm font-bold"><input type="checkbox" className="h-4 w-4 shrink-0 accent-neon" checked={options.needInWallKit} onChange={(event) => setOptions((current) => ({ ...current, needInWallKit: event.target.checked }))} /> Need In-Wall Kit?</label>
       </div>
-      <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
-        <input className="field" name="preferred_date" type="date" aria-label="Preferred Date" />
-        <label className="field flex cursor-pointer items-center gap-3 text-white/70"><Upload size={18} /> Photo Upload<input type="file" name="photo_upload" accept="image/*" className="hidden" /></label>
+      <div className="grid gap-3 md:gap-4 lg:grid-cols-[1fr_1fr]">
+        <input className="field" name="preferred_date" type="text" placeholder="MM/DD/YYYY" inputMode="numeric" pattern="[0-9/]*" aria-label="Preferred Date" />
+        <label className="field flex cursor-pointer items-center gap-3 text-white/70"><Upload size={18} className="shrink-0" /> Photo Upload<input type="file" name="photo_upload" accept="image/*" className="hidden" /></label>
       </div>
       <textarea className="field min-h-32" name="message" placeholder="Message" />
       {error && <p className="rounded-lg border border-red-400/30 bg-red-500/10 p-4 text-sm font-bold text-red-200">{error}</p>}
-      <button className="btn-primary w-full md:w-auto" type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Submit Quote Request"}</button>
+      <button className="btn-primary w-full lg:w-auto" type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Submit Quote Request"}</button>
     </form>
   );
 }

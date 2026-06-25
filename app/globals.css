@@ -82,12 +82,14 @@ textarea {
 
 .field {
   width: 100%;
+  min-height: 3rem;
   border: 1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.06);
   color: white;
   border-radius: .5rem;
   padding: .85rem .95rem;
   outline: none;
+  appearance: none;
 }
 
 .field:focus {
