@@ -11,10 +11,13 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/88 backdrop-blur-xl">
-      <div className="container-px mx-auto flex h-20 max-w-7xl items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-3" aria-label="JM TV Mounting home">
-          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={220} height={165} className="h-12 w-28 rounded-md object-contain sm:w-36" priority />
-          <span className="hidden text-sm font-extrabold uppercase leading-tight tracking-wide sm:block">
+      <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 md:h-20 md:gap-4">
+        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="JM TV Mounting home">
+          <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={220} height={165} className="hidden h-12 w-28 rounded-md object-contain sm:w-36 md:block" priority />
+          <span className="text-balance text-sm font-extrabold uppercase leading-tight tracking-wide text-neon sm:text-base md:hidden">
+            JM TV Mounting<br />& Installation
+          </span>
+          <span className="hidden text-sm font-extrabold uppercase leading-tight tracking-wide md:block">
             JM TV Mounting<br /><span className="text-neon">& Installation</span>
           </span>
         </Link>

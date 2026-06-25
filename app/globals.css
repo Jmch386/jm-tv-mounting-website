@@ -28,7 +28,7 @@ body {
   font-family: var(--font-montserrat), sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 4.5rem;
+  padding-bottom: 5.25rem;
 }
 
 a {

@@ -13,26 +13,28 @@ export default function HomePage() {
   return (
     <>
       <section className="premium-grid relative overflow-hidden border-b border-white/10 bg-ink">
-        <div className="container-px mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-10 py-12 md:py-18 lg:grid-cols-[1fr_460px]">
-          <div className="max-w-4xl">
-            <p className="mb-4 text-sm font-extrabold uppercase tracking-wide text-neon">South Florida TV mounting specialists</p>
-            <h1 className="headline text-6xl text-white sm:text-7xl md:text-8xl lg:text-9xl">Premium TV Mounting & Wire Concealment</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
+        <div className="container-px mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-7 py-7 pb-12 md:min-h-[calc(100vh-5rem)] md:gap-10 md:py-18 lg:grid-cols-[1fr_460px]">
+          <div className="order-2 max-w-4xl lg:order-1">
+            <p className="mb-3 text-sm font-extrabold uppercase tracking-wide text-neon md:mb-4">South Florida TV mounting specialists</p>
+            <h1 className="headline text-5xl text-white sm:text-7xl md:text-8xl lg:text-9xl">Premium TV Mounting & Wire Concealment</h1>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white/72 md:mt-6 md:text-lg md:leading-8">
               Clean, secure, perfectly leveled TV installations for Boca Raton, Coconut Creek, Coral Springs, Parkland, Deerfield Beach, and Pompano Beach.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-8">
               <a href={brand.phoneHref} className="btn-primary"><Phone size={18} /> Call Now</a>
               <a href={brand.textHref} className="btn-secondary"><MessageSquare size={18} /> Text Us</a>
               <a href="#quote" className="btn-secondary">Get a Free Quote <ArrowRight size={18} /></a>
             </div>
-            <div className="mt-7 grid gap-3 text-sm font-bold text-white/75 sm:grid-cols-3">
+            <div className="mt-6 grid gap-3 text-sm font-bold text-white/75 sm:grid-cols-3 md:mt-7">
               <span className="flex items-center gap-2"><ShieldCheck className="text-neon" size={18} /> Secure mounting</span>
               <span className="flex items-center gap-2"><Wrench className="text-neon" size={18} /> Clean installs</span>
               <span className="flex items-center gap-2"><Timer className="text-neon" size={18} /> Same-day availability</span>
             </div>
             <p className="mt-6 font-heading text-5xl text-neon">{brand.phone}</p>
           </div>
-          <HeroLogo />
+          <div className="order-1 lg:order-2">
+            <HeroLogo />
+          </div>
         </div>
       </section>
 
