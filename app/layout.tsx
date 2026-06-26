@@ -51,7 +51,6 @@ const localBusinessSchema = {
   name: brand.name,
   image: "https://jmtvmounting.com/brand/jm-tv-logo.png",
   telephone: brand.phone,
-  email: brand.email,
   priceRange: "$$",
   areaServed: ["Boca Raton", "Coconut Creek", "Coral Springs", "Parkland", "Deerfield Beach", "Pompano Beach"],
   serviceType: ["TV Mounting", "Wire Concealment", "In-Wall Wire Concealment", "Home Theater Installation", "Soundbar Installation"],

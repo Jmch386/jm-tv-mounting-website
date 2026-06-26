@@ -21,7 +21,7 @@ export default function ContactPage() {
           <div className="grid gap-4 md:grid-cols-3">
             <a className="premium-card p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
             <a className="premium-card p-6" href={brand.textHref}><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
-            <a className="premium-card p-6" href={brand.emailHref}><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.email}</p></a>
+            <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
           </div>
         </div>
       </Section>

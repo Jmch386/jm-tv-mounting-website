@@ -17,7 +17,6 @@ export function BookingForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("send_to", "jmch386@gmail.com");
 
     try {
       const response = await fetch(bookingEndpoint, {
@@ -58,7 +57,6 @@ export function BookingForm() {
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="_subject" value="New JM TV Mounting appointment request" />
-          <input type="hidden" name="recipient_email" value="jmch386@gmail.com" />
 
           <input className="field" name="customer_name" placeholder="Customer name" required />
           <input className="field" name="phone_number" placeholder="Phone number" required type="tel" />

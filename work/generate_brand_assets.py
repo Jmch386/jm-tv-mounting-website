@@ -96,7 +96,7 @@ def save_png(name, size, title, subtitle, bullets=()):
         y += int(body_font.size * 1.55)
     contact_font = fit_text(draw, "Call or Text 561-663-3072", int(w * .8), max(26, w // 28))
     draw.text((int(w * .09), int(h * .84)), "Call or Text 561-663-3072", font=contact_font, fill=NEON)
-    draw.text((int(w * .09), int(h * .9)), "jmtvmounting@gmail.com", font=font(max(18, w // 45), bold=True), fill=WHITE)
+    draw.text((int(w * .09), int(h * .9)), "Request a quote online", font=font(max(18, w // 45), bold=True), fill=WHITE)
     img.save(OUT / f"{name}.png", quality=95)
     img.save(OUT / f"{name}.pdf")
 
@@ -109,7 +109,7 @@ materials = [
     ("facebook-cover", (1640, 624), "JM TV Mounting & Installation", "Professional TV Mounting & Wire Concealment", ["Boca Raton", "Coconut Creek", "Coral Springs"]),
     ("instagram-profile-image", (1080, 1080), "JM TV", "Mounting & Installation", ["Call or Text", "561-663-3072"]),
     ("google-business-cover", (2120, 1192), "JM TV Mounting & Installation", "Premium South Florida TV Installations", ["Clean", "Secure", "Perfectly leveled"]),
-    ("email-signature", (1200, 450), "JM TV Mounting", "Professional TV Mounting & Installation", ["561-663-3072", "jmtvmounting@gmail.com"]),
+    ("email-signature", (1200, 450), "JM TV Mounting", "Professional TV Mounting & Installation", ["561-663-3072", "Request a quote online"]),
     ("invoice-template", (1275, 1650), "Invoice", "JM TV Mounting & Installation", ["Customer:", "Service:", "Amount:", "Payment Status:"]),
     ("estimate-template", (1275, 1650), "Estimate", "JM TV Mounting & Installation", ["TV Mounting:", "Wire Concealment:", "Soundbar:", "Estimated Total:"]),
     ("gift-certificate", (1500, 750), "Gift Certificate", "Premium TV Mounting Service", ["To:", "From:", "Amount:", "Valid for JM TV services"]),

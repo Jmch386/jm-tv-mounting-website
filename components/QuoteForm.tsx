@@ -27,7 +27,6 @@ export function QuoteForm() {
     formData.set("need_soundbar", options.needSoundbar ? "Yes" : "No");
     formData.set("need_wire_concealment", options.needWireConcealment ? "Yes" : "No");
     formData.set("need_in_wall_kit", options.needInWallKit ? "Yes" : "No");
-    formData.append("recipient_email", "jmch386@gmail.com");
 
     try {
       const response = await fetch(quoteEndpoint, {
@@ -69,7 +68,6 @@ export function QuoteForm() {
   return (
     <form data-hide-floating-call className="grid gap-3 rounded-lg border border-white/10 bg-white/[.045] p-4 pb-20 sm:p-5 md:gap-4 lg:pb-5" encType="multipart/form-data" onSubmit={handleSubmit}>
       <input type="hidden" name="_subject" value="New JM TV Mounting quote request" />
-      <input type="hidden" name="recipient_email" value="jmch386@gmail.com" />
       <div className="grid gap-3 md:gap-4 lg:grid-cols-3">
         <input className="field" name="name" required placeholder="Name" />
         <input className="field" name="phone" required placeholder="Phone" type="tel" />

@@ -12,7 +12,7 @@ export function Footer() {
             Premium TV mounting, wire concealment, soundbar installation, streaming setup, and home theater services throughout South Florida.
           </p>
           <p className="mt-5 font-extrabold text-neon">{brand.phone}</p>
-          <p className="text-sm text-white/65">{brand.email}</p>
+          <p className="text-sm text-white/65">{brand.emailText}</p>
         </div>
         <div>
           <h3 className="mb-4 font-heading text-2xl">Pages</h3>
