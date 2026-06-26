@@ -67,6 +67,7 @@ export function QuoteForm() {
     formData.set("need_wire_concealment", options.needWireConcealment ? "Yes" : "No");
     formData.set("need_in_wall_kit", options.needInWallKit ? "Yes" : "No");
     const googleSheetPayload = buildGoogleSheetPayload(formData);
+    const googleSheetRequest = sendGoogleSheetLead(googleSheetPayload);
 
     try {
       const response = await fetch(quoteEndpoint, {
@@ -81,7 +82,7 @@ export function QuoteForm() {
         throw new Error("Quote request failed");
       }
 
-      void sendGoogleSheetLead(googleSheetPayload);
+      void googleSheetRequest;
       form.reset();
       setOptions({
         needMount: false,
