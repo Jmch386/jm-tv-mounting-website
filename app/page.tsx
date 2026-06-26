@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Mail, MessageSquare, Phone, Star } from "lucide-react";
-import { BookingForm } from "@/components/BookingForm";
 import { CallNowButton } from "@/components/CallNowButton";
 import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -95,9 +94,6 @@ export default function HomePage() {
 
       <Section id="quote" eyebrow="Quote" title="Request a quote.">
         <QuoteForm />
-        <div className="mt-6">
-          <BookingForm />
-        </div>
       </Section>
 
       <Section eyebrow="Contact" title="Call, text, or email.">

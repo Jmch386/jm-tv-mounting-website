@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
-import { BookingForm } from "@/components/BookingForm";
 import { CallNowButton } from "@/components/CallNowButton";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
@@ -40,7 +39,6 @@ export default function ContactPage() {
       </Section>
       <Section eyebrow="Quote" title="Tell us about the install.">
         <QuoteForm />
-        <div className="mt-6"><BookingForm /></div>
       </Section>
     </>
   );
