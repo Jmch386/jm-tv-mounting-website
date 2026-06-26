@@ -12,25 +12,36 @@ function getFormText(formData: FormData, key: string) {
 }
 
 function getEasternTimestamp() {
-  return new Intl.DateTimeFormat("en-US", {
+  const date = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/New_York",
     year: "numeric",
     month: "2-digit",
-    day: "2-digit",
+    day: "2-digit"
+  }).format(new Date());
+
+  const time = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-    hour12: true,
-    timeZoneName: "short"
+    hour12: true
   }).format(new Date());
+
+  return {
+    date,
+    time,
+    timestamp: `${date} ${time} ET`
+  };
 }
 
 function buildGoogleSheetPayload(formData: FormData) {
   const submittedAt = getEasternTimestamp();
 
   return {
-    timestamp: submittedAt,
-    submittedAt,
+    timestamp: submittedAt.timestamp,
+    submittedAt: submittedAt.timestamp,
+    submittedDate: submittedAt.date,
+    submittedTime: submittedAt.time,
     timeZone: "America/New_York",
     name: getFormText(formData, "name"),
     phone: getFormText(formData, "phone"),
