@@ -106,7 +106,7 @@ export default function HomePage() {
         </Section>
       </section>
 
-      <Section eyebrow="FAQ" title="TV mounting questions, answered.">
+      <Section id="faq" eyebrow="FAQ" title="TV mounting questions, answered.">
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
             <article key={faq.question} className="premium-card p-6">
