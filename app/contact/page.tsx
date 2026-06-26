@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare, Phone } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
 import { ContactForm } from "@/components/ContactForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
-import { brand, cities } from "@/lib/content";
+import { brand } from "@/lib/content";
 
 export const metadata = {
   title: "Contact",
@@ -28,17 +28,6 @@ export default function ContactPage() {
       </Section>
       <Section eyebrow="Contact Form" title="Send us a message.">
         <ContactForm />
-      </Section>
-      <Section eyebrow="Service Area Map" title="South Florida coverage.">
-        <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
-          <iframe title="JM TV Mounting service area map" className="min-h-[420px] w-full rounded-lg border border-white/10 grayscale invert" loading="lazy" src="https://www.google.com/maps?q=Boca%20Raton%20Florida&output=embed" />
-          <div className="rounded-lg border border-white/10 bg-black/35 p-5">
-            <MapPin className="mb-5 text-neon" />
-            <div className="grid grid-cols-2 gap-3 text-sm text-white/72">
-              {cities.map((city) => <span key={city}>{city}</span>)}
-            </div>
-          </div>
-        </div>
       </Section>
     </>
   );
