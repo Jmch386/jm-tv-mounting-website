@@ -64,23 +64,39 @@ export const pricing = [
 
 export const cities = [
   "Boca Raton",
+  "Delray Beach",
+  "Boynton Beach",
   "Coconut Creek",
   "Coral Springs",
   "Parkland",
   "Deerfield Beach",
   "Pompano Beach",
+  "Fort Lauderdale",
+  "West Palm Beach",
   "Margate",
   "Tamarac",
-  "Lighthouse Point",
-  "Fort Lauderdale"
+  "Lighthouse Point"
+];
+
+export const localSeoCities = [
+  { name: "Boca Raton", slug: "boca-raton", county: "Palm Beach County" },
+  { name: "Delray Beach", slug: "delray-beach", county: "Palm Beach County" },
+  { name: "Boynton Beach", slug: "boynton-beach", county: "Palm Beach County" },
+  { name: "Deerfield Beach", slug: "deerfield-beach", county: "Broward County" },
+  { name: "Fort Lauderdale", slug: "fort-lauderdale", county: "Broward County" },
+  { name: "Pompano Beach", slug: "pompano-beach", county: "Broward County" },
+  { name: "Coral Springs", slug: "coral-springs", county: "Broward County" },
+  { name: "Parkland", slug: "parkland", county: "Broward County" },
+  { name: "Coconut Creek", slug: "coconut-creek", county: "Broward County" },
+  { name: "West Palm Beach", slug: "west-palm-beach", county: "Palm Beach County" }
 ];
 
 export const priorityCities = [
   "Boca Raton",
-  "Coconut Creek",
-  "Coral Springs",
-  "Parkland",
+  "Delray Beach",
+  "Boynton Beach",
   "Deerfield Beach",
+  "Fort Lauderdale",
   "Pompano Beach"
 ];
 

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { brand } from "@/lib/content";
+import { brand, localSeoCities } from "@/lib/content";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ const localBusinessSchema = {
   image: "https://jmtvmounting.com/brand/jm-tv-logo.png",
   telephone: brand.phone,
   priceRange: "$$",
-  areaServed: ["Boca Raton", "Coconut Creek", "Coral Springs", "Parkland", "Deerfield Beach", "Pompano Beach"],
+  areaServed: localSeoCities.map((city) => city.name),
   serviceType: ["TV Mounting", "Wire Concealment", "In-Wall Wire Concealment", "Home Theater Installation", "Soundbar Installation"],
   url: "https://jmtvmounting.com"
 };

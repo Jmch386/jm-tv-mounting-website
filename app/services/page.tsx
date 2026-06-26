@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { CheckCircle2, MapPin } from "lucide-react";
 import { Section } from "@/components/Section";
-import { priorityCities, serviceDetails, services } from "@/lib/content";
+import { localSeoCities, serviceDetails, services } from "@/lib/content";
 
 export const metadata = {
   title: "Services",
@@ -34,14 +35,14 @@ export default function ServicesPage() {
       <section className="section-band">
         <Section eyebrow="Local service" title="TV mounting near you.">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {priorityCities.map((city) => (
-              <div key={city} className="premium-card flex items-start gap-3 p-5">
+            {localSeoCities.map((city) => (
+              <Link key={city.slug} href={`/tv-mounting/${city.slug}`} className="premium-card flex items-start gap-3 p-5 transition hover:border-neon/40">
                 <MapPin className="mt-1 shrink-0 text-neon" size={20} />
                 <div>
-                  <h2 className="font-heading text-3xl">TV Mounting {city}</h2>
-                  <p className="mt-2 text-sm leading-6 text-white/62">Clean installs, wire concealment, soundbar installation, and setup for homes in {city}.</p>
+                  <h2 className="font-heading text-3xl">TV Mounting {city.name}</h2>
+                  <p className="mt-2 text-sm leading-6 text-white/62">Clean installs, wire concealment, soundbar installation, and setup for homes in {city.name}.</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </Section>

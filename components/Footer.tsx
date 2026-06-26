@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { brand, cities, navItems } from "@/lib/content";
+import { brand, localSeoCities, navItems } from "@/lib/content";
 
 export function Footer() {
   return (
@@ -23,7 +23,11 @@ export function Footer() {
         <div>
           <h3 className="mb-4 font-heading text-2xl">Service Area</h3>
           <div className="grid grid-cols-2 gap-2 text-xs text-white/65">
-            {cities.map((city) => <span key={city}>{city}</span>)}
+            {localSeoCities.map((city) => (
+              <Link key={city.slug} href={`/tv-mounting/${city.slug}`} className="hover:text-neon">
+                {city.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
