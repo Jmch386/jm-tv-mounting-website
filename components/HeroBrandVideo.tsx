@@ -3,7 +3,7 @@ import { brand } from "@/lib/content";
 
 export function HeroBrandVideo() {
   return (
-    <div className="mb-5 w-full max-w-[15rem] sm:max-w-[17rem] lg:max-w-[20rem]">
+    <div className="mb-5 w-full max-w-[17.5rem] sm:max-w-[23rem] lg:max-w-[32rem] xl:max-w-[36rem]">
       <video
         className="h-auto w-full rounded-md object-contain"
         autoPlay
