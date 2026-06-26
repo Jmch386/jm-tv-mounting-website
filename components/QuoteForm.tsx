@@ -155,7 +155,7 @@ export function QuoteForm() {
         <label className="flex min-h-12 items-center gap-3 rounded-lg border border-white/10 bg-black/25 p-3 text-sm font-bold"><input type="checkbox" className="h-4 w-4 shrink-0 accent-neon" checked={options.needInWallKit} onChange={(event) => setOptions((current) => ({ ...current, needInWallKit: event.target.checked }))} /> Need In-Wall Kit?</label>
       </div>
       <div className="grid gap-3 md:gap-4 lg:grid-cols-[1fr_1fr]">
-        <input className="field" name="preferred_date" type="text" placeholder="MM/DD/YYYY" inputMode="numeric" pattern="[0-9/]*" aria-label="Preferred Date" />
+        <input className="field" name="preferred_date" type="date" aria-label="Preferred Date" />
         <label className="field flex cursor-pointer items-center gap-3 text-white/70"><Upload size={18} className="shrink-0" /> Photo Upload<input type="file" name="photo_upload" accept="image/*" className="hidden" /></label>
       </div>
       <textarea className="field min-h-32" name="message" placeholder="Message" />

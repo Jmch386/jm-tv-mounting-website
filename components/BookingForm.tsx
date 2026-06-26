@@ -92,7 +92,7 @@ export function BookingForm() {
             <option>Not sure</option>
           </select>
 
-          <input className="field" name="preferred_date" required type="text" placeholder="MM/DD/YYYY" inputMode="numeric" pattern="[0-9/]*" aria-label="Preferred date" />
+          <input className="field" name="preferred_date" required type="date" aria-label="Preferred date" />
           <select className="field" name="preferred_time" required defaultValue="">
             <option value="" disabled>Preferred time</option>
             <option>Morning</option>
