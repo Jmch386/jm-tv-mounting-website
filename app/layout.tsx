@@ -6,7 +6,7 @@ import { brand, localSeoCities } from "@/lib/content";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jmtvmounting.com"),
+  metadataBase: new URL("https://jmtvmount.com"),
   title: {
     default: "JM TV Mounting & Installation | TV Mounting Boca Raton",
     template: "%s | JM TV Mounting & Installation"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JM TV Mounting & Installation",
     description: "Clean, secure, perfectly leveled TV installations across Boca Raton, Coconut Creek, Coral Springs, Parkland, Deerfield Beach, and Pompano Beach.",
-    url: "https://jmtvmounting.com",
+    url: "https://jmtvmount.com",
     siteName: brand.name,
     images: [{ url: "/brand/og-logo.png", width: 1200, height: 900 }],
     locale: "en_US",
@@ -49,12 +49,12 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: brand.name,
-  image: "https://jmtvmounting.com/brand/jm-tv-logo.png",
+  image: "https://jmtvmount.com/brand/jm-tv-logo.png",
   telephone: brand.phone,
   priceRange: "$$",
   areaServed: localSeoCities.map((city) => city.name),
   serviceType: ["TV Mounting", "Wire Concealment", "In-Wall Wire Concealment", "Home Theater Installation", "Soundbar Installation"],
-  url: "https://jmtvmounting.com"
+  url: "https://jmtvmount.com"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

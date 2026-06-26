@@ -6,7 +6,7 @@ const cityRoutes = localSeoCities.map((city) => `/tv-mounting/${city.slug}`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [...routes, ...cityRoutes].map((route) => ({
-    url: `https://jmtvmounting.com${route}`,
+    url: `https://jmtvmount.com${route}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: route === "" ? 1 : .8

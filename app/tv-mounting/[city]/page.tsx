@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     openGraph: {
       title: `TV Mounting ${city.name} | JM TV Mounting & Installation`,
       description: `Clean TV mounting, hidden wires, soundbar installation, and secure wall mounting in ${city.name}.`,
-      url: `https://jmtvmounting.com/tv-mounting/${city.slug}`,
+      url: `https://jmtvmount.com/tv-mounting/${city.slug}`,
       images: [{ url: "/brand/og-logo.png", width: 1200, height: 900 }]
     }
   };
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 export default async function CityTvMountingPage({ params }: CityPageProps) {
   const { city: slug } = await params;
   const city = getCity(slug) ?? localSeoCities[0];
-  const pageUrl = `https://jmtvmounting.com/tv-mounting/${city.slug}`;
+  const pageUrl = `https://jmtvmount.com/tv-mounting/${city.slug}`;
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -56,7 +56,7 @@ export default async function CityTvMountingPage({ params }: CityPageProps) {
       "@type": "LocalBusiness",
       name: brand.name,
       telephone: brand.phone,
-      url: "https://jmtvmounting.com"
+      url: "https://jmtvmount.com"
     },
     areaServed: {
       "@type": "City",
