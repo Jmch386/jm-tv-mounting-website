@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import { BookingForm } from "@/components/BookingForm";
+import { CallNowButton } from "@/components/CallNowButton";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
@@ -20,7 +21,7 @@ export default function ContactPage() {
             <Image src={brand.logo} alt="JM TV Mounting & Installation logo" width={320} height={320} className="h-auto w-full max-w-56 rounded-md object-contain" />
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <a className="premium-card p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
+            <CallNowButton className="premium-card block p-6"><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></CallNowButton>
             <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
             <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
           </div>

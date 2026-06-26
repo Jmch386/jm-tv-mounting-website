@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Mail, MessageSquare, Phone, Star } from "lucide-react";
 import { BookingForm } from "@/components/BookingForm";
+import { CallNowButton } from "@/components/CallNowButton";
 import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
@@ -22,7 +23,7 @@ export default function HomePage() {
               Clean, secure, perfectly leveled TV installations throughout South Florida.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href={brand.phoneHref} className="btn-primary"><Phone size={18} /> Call Now</a>
+              <CallNowButton className="btn-primary" />
               <a href="#quote" className="btn-secondary">Get a Free Quote</a>
             </div>
             <div className="mt-8 grid gap-3 text-sm font-bold text-white/70 sm:grid-cols-3">
@@ -101,7 +102,7 @@ export default function HomePage() {
 
       <Section eyebrow="Contact" title="Call, text, or email.">
         <div className="grid gap-4 md:grid-cols-3">
-          <a className="premium-card p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
+          <CallNowButton className="premium-card block p-6"><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></CallNowButton>
           <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
           <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
         </div>

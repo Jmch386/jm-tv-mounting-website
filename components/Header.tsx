@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { CallNowButton } from "@/components/CallNowButton";
 import { TextUsButton } from "@/components/TextUsButton";
-import { brand, navItems } from "@/lib/content";
+import { navItems } from "@/lib/content";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -29,10 +30,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href={brand.phoneHref} className="btn-secondary">
-            <Phone size={18} />
-            Call Now
-          </a>
+          <CallNowButton className="btn-secondary" />
           <TextUsButton className="btn-primary" />
         </div>
 
@@ -50,10 +48,7 @@ export function Header() {
             ))}
           </nav>
           <div className="grid gap-3">
-            <a href={brand.phoneHref} className="btn-primary w-full">
-              <Phone size={18} />
-              Call Now
-            </a>
+            <CallNowButton className="btn-primary w-full" />
             <TextUsButton className="btn-secondary w-full" />
           </div>
         </div>
