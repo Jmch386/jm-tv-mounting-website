@@ -3,7 +3,7 @@ import { brand } from "@/lib/content";
 
 export function HeroBrandVideo() {
   return (
-    <div className="mb-5 w-full max-w-[17.5rem] sm:max-w-[23rem] lg:max-w-[32rem] xl:max-w-[36rem]">
+    <div className="mx-auto mb-6 w-full max-w-[18rem] sm:max-w-[24rem] lg:max-w-[28rem] xl:max-w-[30rem]">
       <video
         className="h-auto w-full rounded-md object-contain"
         autoPlay
@@ -14,7 +14,7 @@ export function HeroBrandVideo() {
         poster={brand.logo}
         aria-label={`${brand.name} animated logo`}
       >
-        <source src="/brand/jm-logo-hero-animated.mp4" type="video/mp4" />
+        <source src="/brand/hero-logo-square.mp4" type="video/mp4" />
       </video>
       <noscript>
         <Image src={brand.logo} alt={brand.name} width={1200} height={1200} className="h-auto w-full rounded-md object-contain" />
