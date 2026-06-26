@@ -50,7 +50,7 @@ export default function HomePage() {
       </Section>
 
       <section className="section-band">
-        <Section eyebrow="Pricing" title="Clear starting rates.">
+        <Section eyebrow="Pricing" title="MODERN INSTALLS WITH CLEAR, UPFRONT PRICING — NO SURPRISE FEES">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {pricing.map((item) => (
               <article key={item.title} className="premium-card flex h-full flex-col p-5">
