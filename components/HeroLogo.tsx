@@ -5,7 +5,7 @@ import { brand } from "@/lib/content";
 
 export function HeroLogo() {
   return (
-    <div className="mx-auto w-full max-w-[85%] sm:max-w-[24rem] lg:max-w-[28rem]">
+    <div className="mx-auto w-full max-w-[85%] sm:max-w-[24rem] lg:max-w-[34rem] xl:max-w-[38rem]">
       <video
         className="h-auto w-full rounded-md object-contain"
         autoPlay
