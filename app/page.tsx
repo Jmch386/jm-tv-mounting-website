@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Mail, MessageSquare, Phone, Star } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
+import { HeroBrandVideo } from "@/components/HeroBrandVideo";
 import { HeroInstallImage } from "@/components/HeroInstallImage";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
@@ -28,7 +29,7 @@ export default function HomePage() {
       <section className="border-b border-white/10 bg-ink">
         <div className="container-px mx-auto grid max-w-7xl items-center gap-0 py-6 pb-12 md:gap-10 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:grid-cols-[minmax(0,1fr)_minmax(500px,620px)]">
           <div className="order-2 max-w-3xl lg:order-1">
-            <p className="mb-4 text-sm font-extrabold uppercase tracking-wide text-neon">South Florida TV mounting</p>
+            <HeroBrandVideo />
             <h1 className="headline text-5xl text-white sm:text-6xl md:text-7xl">
               Professional TV Mounting & Wire Concealment
             </h1>
