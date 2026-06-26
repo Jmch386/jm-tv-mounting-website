@@ -164,6 +164,12 @@ export const galleryCategories = [
 export const gallery = [
   {
     category: "Living Rooms",
+    title: "Featured Install — Clean Floating Console Setup",
+    image: "/gallery/featured-floating-console-install.jpg",
+    thumb: "/gallery/featured-floating-console-install-thumb.jpg"
+  },
+  {
+    category: "Living Rooms",
     title: "Living Room TV Installation",
     image: "/gallery/living-room-install.webp",
     thumb: "/gallery/living-room-install-thumb.webp"

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Mail, MessageSquare, Phone, Star } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
-import { HeroLogo } from "@/components/HeroLogo";
+import { HeroInstallImage } from "@/components/HeroInstallImage";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
@@ -46,7 +46,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="order-1 mb-8 lg:order-2 lg:mb-0">
-            <HeroLogo />
+            <HeroInstallImage />
           </div>
         </div>
       </section>

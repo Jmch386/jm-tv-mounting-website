@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { CallNowButton } from "@/components/CallNowButton";
+import { HeaderLogo } from "@/components/HeaderLogo";
 import { TextUsButton } from "@/components/TextUsButton";
 import { navItems } from "@/lib/content";
 
@@ -15,8 +15,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/88 backdrop-blur-xl">
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 md:h-20 md:gap-4">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="JM TV Mounting home">
-          <Image src="/brand/icon-only.png" alt="JM TV Mounting & Installation logo" width={220} height={220} className="h-11 w-11 rounded-md object-contain sm:h-12 sm:w-12" priority />
-          <span className="text-sm font-extrabold uppercase leading-tight tracking-wide text-white">
+          <HeaderLogo />
+          <span className="text-base font-extrabold uppercase leading-tight tracking-wide text-white sm:text-lg">
             JM TV Mounting<br /><span className="text-neon">& Installation</span>
           </span>
         </Link>
