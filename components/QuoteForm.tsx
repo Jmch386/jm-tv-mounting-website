@@ -11,8 +11,27 @@ function getFormText(formData: FormData, key: string) {
   return typeof value === "string" ? value : "";
 }
 
+function getEasternTimestamp() {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZoneName: "short"
+  }).format(new Date());
+}
+
 function buildGoogleSheetPayload(formData: FormData) {
+  const submittedAt = getEasternTimestamp();
+
   return {
+    timestamp: submittedAt,
+    submittedAt,
+    timeZone: "America/New_York",
     name: getFormText(formData, "name"),
     phone: getFormText(formData, "phone"),
     email: getFormText(formData, "email"),
