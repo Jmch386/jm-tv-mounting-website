@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
+import { ContactForm } from "@/components/ContactForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
 import { brand, cities } from "@/lib/content";
@@ -24,6 +25,9 @@ export default function ContactPage() {
             <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
           </div>
         </div>
+      </Section>
+      <Section eyebrow="Contact Form" title="Send us a message.">
+        <ContactForm />
       </Section>
       <Section eyebrow="Service Area Map" title="South Florida coverage.">
         <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
