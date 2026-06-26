@@ -86,7 +86,7 @@ export default async function CityTvMountingPage({ params }: CityPageProps) {
           </div>
           <aside className="premium-card p-6">
             <MapPin className="mb-5 text-neon" size={28} />
-            <h2 className="font-heading text-4xl text-white">{city.name} Service Area</h2>
+            <h2 className="font-heading text-4xl text-neon">{city.name} Service Area</h2>
             <p className="mt-3 text-sm leading-6 text-white/65">
               Fast local quote requests for standard mounting, large-format TVs, full-motion mounts, wire concealment, and soundbar installs.
             </p>
@@ -99,7 +99,7 @@ export default async function CityTvMountingPage({ params }: CityPageProps) {
           {serviceDetails.map((service) => (
             <article key={service.title} className="premium-card h-full p-5">
               <CheckCircle2 className="mb-4 text-neon" size={24} />
-              <h2 className="font-heading text-3xl text-white">{service.title}</h2>
+              <h2 className="font-heading text-3xl text-neon">{service.title}</h2>
               <p className="mt-3 text-sm leading-6 text-white/68">{service.text}</p>
             </article>
           ))}

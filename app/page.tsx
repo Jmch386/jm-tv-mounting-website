@@ -55,7 +55,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
           {serviceDetails.map((service) => (
             <article key={service.title} className="premium-card h-full p-5">
-              <h3 className="font-heading text-3xl text-white">{service.title}</h3>
+              <h3 className="font-heading text-3xl text-neon">{service.title}</h3>
               <p className="mt-3 text-sm leading-6 text-white/68">{service.text}</p>
             </article>
           ))}
@@ -110,7 +110,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
             <article key={faq.question} className="premium-card p-6">
-              <h3 className="font-heading text-3xl text-white">{faq.question}</h3>
+              <h3 className="font-heading text-3xl text-neon">{faq.question}</h3>
               <p className="mt-3 text-sm leading-7 text-white/68">{faq.answer}</p>
             </article>
           ))}

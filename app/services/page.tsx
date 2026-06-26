@@ -16,7 +16,7 @@ export default function ServicesPage() {
           {serviceDetails.map((service) => (
             <article key={service.title} className="premium-card p-6">
               <CheckCircle2 className="mb-5 text-neon" size={30} />
-              <h2 className="font-heading text-5xl">{service.title}</h2>
+              <h2 className="font-heading text-5xl text-neon">{service.title}</h2>
               <p className="mt-3 text-sm leading-7 text-white/68">{service.text}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {service.tags.map((tag) => <span key={tag} className="rounded-md border border-neon/30 bg-neon/10 px-3 py-1 text-xs font-extrabold text-neon">{tag}</span>)}
@@ -39,7 +39,7 @@ export default function ServicesPage() {
               <Link key={city.slug} href={`/tv-mounting/${city.slug}`} className="premium-card flex items-start gap-3 p-5 transition hover:border-neon/40">
                 <MapPin className="mt-1 shrink-0 text-neon" size={20} />
                 <div>
-                  <h2 className="font-heading text-3xl">TV Mounting {city.name}</h2>
+                  <h2 className="font-heading text-3xl text-neon">TV Mounting {city.name}</h2>
                   <p className="mt-2 text-sm leading-6 text-white/62">Clean installs, wire concealment, soundbar installation, and setup for homes in {city.name}.</p>
                 </div>
               </Link>
