@@ -5,6 +5,7 @@ import { BookingForm } from "@/components/BookingForm";
 import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
+import { TextUsButton } from "@/components/TextUsButton";
 import { brand, gallery, pricing, serviceDetails, testimonials } from "@/lib/content";
 
 export default function HomePage() {
@@ -101,7 +102,7 @@ export default function HomePage() {
       <Section eyebrow="Contact" title="Call, text, or email.">
         <div className="grid gap-4 md:grid-cols-3">
           <a className="premium-card p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
-          <a className="premium-card p-6" href={brand.textHref}><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
+          <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
           <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
         </div>
       </Section>

@@ -3,6 +3,7 @@ import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import { BookingForm } from "@/components/BookingForm";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
+import { TextUsButton } from "@/components/TextUsButton";
 import { brand, cities } from "@/lib/content";
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function ContactPage() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             <a className="premium-card p-6" href={brand.phoneHref}><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
-            <a className="premium-card p-6" href={brand.textHref}><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></a>
+            <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
             <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
           </div>
         </div>

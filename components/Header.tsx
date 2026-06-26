@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, MessageSquare, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import { TextUsButton } from "@/components/TextUsButton";
 import { brand, navItems } from "@/lib/content";
 
 export function Header() {
@@ -32,10 +33,7 @@ export function Header() {
             <Phone size={18} />
             Call Now
           </a>
-          <a href={brand.textHref} className="btn-primary">
-            <MessageSquare size={18} />
-            Text Us
-          </a>
+          <TextUsButton className="btn-primary" />
         </div>
 
         <button className="btn-ghost px-3 lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
@@ -56,10 +54,7 @@ export function Header() {
               <Phone size={18} />
               Call Now
             </a>
-            <a href={brand.textHref} className="btn-secondary w-full">
-              <MessageSquare size={18} />
-              Text Us
-            </a>
+            <TextUsButton className="btn-secondary w-full" />
           </div>
         </div>
       )}

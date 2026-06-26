@@ -2,7 +2,7 @@ export const brand = {
   name: "JM TV Mounting & Installation",
   phone: "561-663-3072",
   phoneHref: "tel:5616633072",
-  textHref: "sms:5616633072",
+  textHref: "sms:+15616633072",
   emailText: "Email requests accepted through the contact form",
   logo: "/brand/jm-tv-logo.png"
 };
