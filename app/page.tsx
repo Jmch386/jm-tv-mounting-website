@@ -6,11 +6,25 @@ import { HeroLogo } from "@/components/HeroLogo";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
-import { brand, gallery, pricing, serviceDetails, testimonials } from "@/lib/content";
+import { brand, faqs, gallery, pricing, serviceDetails, testimonials } from "@/lib/content";
 
 export default function HomePage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="border-b border-white/10 bg-ink">
         <div className="container-px mx-auto grid max-w-7xl items-center gap-0 py-6 pb-12 md:gap-10 md:py-18 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:grid-cols-[minmax(0,1fr)_minmax(500px,620px)]">
           <div className="order-2 max-w-3xl lg:order-1">
@@ -91,6 +105,17 @@ export default function HomePage() {
           </div>
         </Section>
       </section>
+
+      <Section eyebrow="FAQ" title="TV mounting questions, answered.">
+        <div className="grid gap-4 md:grid-cols-2">
+          {faqs.map((faq) => (
+            <article key={faq.question} className="premium-card p-6">
+              <h3 className="font-heading text-3xl text-white">{faq.question}</h3>
+              <p className="mt-3 text-sm leading-7 text-white/68">{faq.answer}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
 
       <Section id="quote" eyebrow="Quote" title="Request a quote.">
         <QuoteForm />

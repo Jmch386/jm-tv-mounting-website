@@ -125,6 +125,33 @@ export const testimonials = [
   }
 ];
 
+export const faqs = [
+  {
+    question: "How much does TV mounting cost?",
+    answer: "Standard TV mounting starts at $139 for TVs up to 55 inches, $199 for TVs 65-75 inches, and oversized 85 inch or larger TV mounting starts at $275. Add-ons like full-motion mounts, soundbars, and wire concealment are priced separately."
+  },
+  {
+    question: "Do you hide wires?",
+    answer: "Yes. JM TV Mounting offers external wire concealment with raceway routing and in-wall wire concealment options for a cleaner finished look."
+  },
+  {
+    question: "Do I need to provide the TV mount?",
+    answer: "You can provide your own mount, or request help choosing the right fixed, tilting, or full-motion mount for your TV size, wall type, and room layout."
+  },
+  {
+    question: "Can you mount TVs on concrete or brick?",
+    answer: "Yes. TVs can be mounted on drywall, concrete, brick, and fireplace walls when the right hardware and placement are used."
+  },
+  {
+    question: "Do you install soundbars?",
+    answer: "Yes. Soundbar installation is available as a standalone service or as an add-on with TV mounting. The soundbar can be centered under or above the TV for a clean setup."
+  },
+  {
+    question: "What areas do you serve?",
+    answer: "JM TV Mounting serves South Florida, including Boca Raton, Delray Beach, Boynton Beach, Deerfield Beach, Fort Lauderdale, Pompano Beach, Coral Springs, Parkland, Coconut Creek, and West Palm Beach."
+  }
+];
+
 export const galleryCategories = [
   "Living Rooms",
   "Bedrooms",
