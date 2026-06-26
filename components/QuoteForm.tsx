@@ -4,6 +4,45 @@ import { Upload } from "lucide-react";
 import { type FormEvent, useState } from "react";
 
 const quoteEndpoint = "https://formspree.io/f/xzdleeow";
+const googleSheetEndpoint = "https://script.google.com/macros/s/AKfycbyyj6GPNCMT2XTQGHfGxRjoDnN7g3ryDXm_4B5sOp2IiwQytBdpRCSbynDJpbBvFLse/exec";
+
+function getFormText(formData: FormData, key: string) {
+  const value = formData.get(key);
+  return typeof value === "string" ? value : "";
+}
+
+function buildGoogleSheetPayload(formData: FormData) {
+  return {
+    name: getFormText(formData, "name"),
+    phone: getFormText(formData, "phone"),
+    email: getFormText(formData, "email"),
+    city: getFormText(formData, "city"),
+    tvSize: getFormText(formData, "tv_size"),
+    wallType: getFormText(formData, "wall_type"),
+    needMount: getFormText(formData, "need_mount"),
+    needSoundbar: getFormText(formData, "need_soundbar"),
+    needWireConcealment: getFormText(formData, "need_wire_concealment"),
+    needInWallKit: getFormText(formData, "need_in_wall_kit"),
+    preferredDate: getFormText(formData, "preferred_date"),
+    message: getFormText(formData, "message"),
+    photoUrl: getFormText(formData, "photoUrl")
+  };
+}
+
+async function sendGoogleSheetLead(payload: ReturnType<typeof buildGoogleSheetPayload>) {
+  try {
+    await fetch(googleSheetEndpoint, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain"
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch {
+    // Keep the customer flow moving if the Google Sheet request fails.
+  }
+}
 
 export function QuoteForm() {
   const [sent, setSent] = useState(false);
@@ -27,6 +66,7 @@ export function QuoteForm() {
     formData.set("need_soundbar", options.needSoundbar ? "Yes" : "No");
     formData.set("need_wire_concealment", options.needWireConcealment ? "Yes" : "No");
     formData.set("need_in_wall_kit", options.needInWallKit ? "Yes" : "No");
+    const googleSheetPayload = buildGoogleSheetPayload(formData);
 
     try {
       const response = await fetch(quoteEndpoint, {
@@ -41,6 +81,7 @@ export function QuoteForm() {
         throw new Error("Quote request failed");
       }
 
+      void sendGoogleSheetLead(googleSheetPayload);
       form.reset();
       setOptions({
         needMount: false,
