@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
-import { QuoteForm } from "@/components/QuoteForm";
 import { Section } from "@/components/Section";
 import { TextUsButton } from "@/components/TextUsButton";
 import { brand, cities } from "@/lib/content";
@@ -36,9 +35,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </Section>
-      <Section eyebrow="Quote" title="Tell us about the install.">
-        <QuoteForm />
       </Section>
     </>
   );
