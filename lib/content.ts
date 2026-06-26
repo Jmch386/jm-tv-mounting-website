@@ -54,13 +54,13 @@ export const serviceDetails = [
 ];
 
 export const pricing = [
-  { title: "TVs up to 55\"", price: "$125", note: "Standard TV mounting" },
-  { title: "TVs 65\"-75\"", price: "$175", note: "Large-format TV mounting" },
-  { title: "TVs 85\"+", price: "$225", note: "Oversized TV mounting" },
+  { title: "TVs up to 55\"", price: "$139", note: "Standard TV mounting" },
+  { title: "TVs 65\"-75\"", price: "$199", note: "Large-format TV mounting" },
+  { title: "TVs 85\"+", price: "Starting at $275", note: "Oversized TV mounting" },
   { title: "Full motion mount", price: "+$50", note: "Articulating mount setup" },
-  { title: "Soundbar installation", price: "$65", note: "Clean, centered audio install" },
-  { title: "Wire concealment", price: "$75", note: "External raceway routing" },
-  { title: "In-wall wire concealment", price: "Starting at $150", note: "Hidden cable kit install" }
+  { title: "Soundbar installation", price: "$75", note: "Clean, centered audio install" },
+  { title: "Wire concealment", price: "$85", note: "External raceway routing" },
+  { title: "In-wall wire concealment", price: "Starting at $150", note: "Clean in-wall cable concealment" }
 ];
 
 export const cities = [

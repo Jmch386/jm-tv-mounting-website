@@ -51,10 +51,10 @@ export default function HomePage() {
         <Section eyebrow="Pricing" title="Clear starting rates.">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {pricing.map((item) => (
-              <article key={item.title} className="premium-card p-5">
+              <article key={item.title} className="premium-card flex h-full flex-col p-5">
                 <h3 className="text-sm font-extrabold text-white/72">{item.title}</h3>
                 <p className="mt-3 font-heading text-5xl text-neon">{item.price}</p>
-                <p className="mt-2 text-sm leading-6 text-white/60">{item.note}</p>
+                <p className="mt-auto pt-2 text-sm leading-6 text-white/60">{item.note}</p>
               </article>
             ))}
           </div>
