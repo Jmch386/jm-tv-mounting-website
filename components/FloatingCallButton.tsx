@@ -1,8 +1,7 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { ClipboardList } from "lucide-react";
 import { useEffect, useState } from "react";
-import { brand } from "@/lib/content";
 
 export function FloatingCallButton() {
   const [showMobileButton, setShowMobileButton] = useState(false);
@@ -54,12 +53,12 @@ export function FloatingCallButton() {
 
   return (
     <a
-      href={brand.phoneHref}
+      href="/#quote"
       className={`fixed bottom-3 left-4 right-4 z-50 flex min-h-12 items-center justify-center gap-3 rounded-lg bg-neon px-5 py-3 text-sm font-extrabold text-white shadow-glow transition duration-200 hover:bg-brandHover sm:hidden ${showMobileButton && !formInView ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"}`}
-      aria-label={`Call JM TV Mounting at ${brand.phone}`}
+      aria-label="Request a JM TV Mounting quote"
     >
-      <Phone size={19} />
-      Call Now
+      <ClipboardList size={19} />
+      Request Quote
     </a>
   );
 }
