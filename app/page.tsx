@@ -28,22 +28,22 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="border-b border-white/10 bg-ink">
         <div className="container-px mx-auto grid max-w-7xl items-center gap-8 py-8 pb-12 md:gap-10 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:grid-cols-[minmax(0,1fr)_minmax(500px,620px)]">
-          <div className="order-1 mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
+          <div className="order-1 mx-auto max-w-3xl text-center md:mx-0 md:text-left">
             <HeroBrandVideo />
             <h1 className="headline text-5xl text-white sm:text-6xl md:text-7xl">
               Professional TV Mounting & Wire Concealment
             </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/72 md:text-lg lg:mx-0">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/72 md:mx-0 md:text-lg">
               Clean, secure, perfectly leveled TV installations throughout South Florida.
             </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
               <CallNowButton className="btn-primary" />
               <a href="#quote" className="btn-secondary">Get a Free Quote</a>
             </div>
             <div className="mt-8 grid gap-3 text-sm font-bold text-white/70 sm:grid-cols-3">
-              <span className="flex items-center justify-center gap-2 lg:justify-start"><CheckCircle2 className="text-neon" size={18} /> Clean finish</span>
-              <span className="flex items-center justify-center gap-2 lg:justify-start"><CheckCircle2 className="text-neon" size={18} /> Secure mount</span>
-              <span className="flex items-center justify-center gap-2 lg:justify-start"><CheckCircle2 className="text-neon" size={18} /> Hidden wires</span>
+              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Clean finish</span>
+              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Secure mount</span>
+              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Hidden wires</span>
             </div>
           </div>
           <div className="order-2 lg:order-2">
