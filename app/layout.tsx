@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { FloatingCallButton } from "@/components/FloatingCallButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { brand, localSeoCities } from "@/lib/content";
 import "./globals.css";
 
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
         <Header />
         <main>{children}</main>
+        <ScrollToTopButton />
         <FloatingCallButton />
         <Footer />
       </body>
