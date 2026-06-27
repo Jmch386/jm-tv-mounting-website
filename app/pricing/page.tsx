@@ -10,7 +10,7 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <>
-      <Section eyebrow="Pricing" title="Modern installs with clear, upfront pricing — no surprise fees.">
+      <Section eyebrow="Pricing" title="Modern installs with clear, upfront pricing - no surprise fees.">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {pricing.map((item) => (
             <article key={item.title} className="flex h-full flex-col rounded-lg border border-white/10 bg-black/35 p-5">

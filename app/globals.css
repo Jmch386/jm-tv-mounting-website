@@ -52,6 +52,10 @@ textarea {
   font: inherit;
 }
 
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 .container-px {
   padding-left: clamp(1rem, 4vw, 4rem);
   padding-right: clamp(1rem, 4vw, 4rem);
@@ -96,9 +100,23 @@ textarea {
   appearance: none;
 }
 
+.field::placeholder {
+  color: rgba(255, 255, 255, .6);
+}
+
 .field:focus {
   border-color: var(--neon);
   box-shadow: 0 0 0 3px rgba(0,109,255,.16);
+}
+
+.field[type="date"] {
+  color-scheme: dark;
+}
+
+.field[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(1);
+  opacity: .72;
 }
 
 .field option {
