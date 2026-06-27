@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="container-px mx-auto grid max-w-7xl items-center gap-8 py-8 pb-12 md:gap-10 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:grid-cols-[minmax(0,1fr)_minmax(500px,620px)]">
           <div className="order-1 mx-auto max-w-3xl text-center md:mx-0 md:text-left">
             <HeroBrandVideo />
-            <h1 className="headline text-5xl text-white sm:text-6xl md:text-7xl">
+            <h1 className="headline text-4xl text-white sm:text-5xl md:text-6xl">
               Professional TV Mounting & Wire Concealment
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/72 md:mx-0 md:text-lg">
