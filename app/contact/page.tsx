@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, MessageSquare, Phone } from "lucide-react";
 import { CallNowButton } from "@/components/CallNowButton";
 import { ContactForm } from "@/components/ContactForm";
@@ -22,11 +23,11 @@ export default function ContactPage() {
           <div className="grid gap-4 md:grid-cols-3">
             <CallNowButton className="premium-card block p-6"><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></CallNowButton>
             <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
-            <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
+            <Link href="#contact-form" className="premium-card block p-6 transition hover:border-neon/40"><Mail className="mb-5 text-neon" /><p className="font-bold">Email Us</p><p className="mt-2 text-white/65">{brand.emailText}</p></Link>
           </div>
         </div>
       </Section>
-      <Section eyebrow="Contact Form" title="Send us a message.">
+      <Section id="contact-form" eyebrow="Contact Form" title="Send us a message.">
         <ContactForm />
       </Section>
     </>
