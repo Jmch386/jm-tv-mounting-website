@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { brand, localSeoCities, navItems } from "@/lib/content";
 
 export function Footer() {
@@ -6,18 +7,14 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-black py-12">
       <div className="container-px mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_.8fr_.8fr]">
         <div>
-          <video
-            className="mb-5 h-auto w-32 rounded-md object-contain sm:w-40"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster={brand.logo}
-            aria-label="JM TV Mounting & Installation logo"
-          >
-            <source src="/brand/footer-video-logo.mp4" type="video/mp4" />
-          </video>
+          <Image
+            src="/brand/footer-tv-words-logo.png"
+            alt={`${brand.name} TV mounting and installation logo`}
+            width={1254}
+            height={1254}
+            sizes="(max-width: 640px) 240px, 320px"
+            className="mb-7 h-auto w-52 max-w-full object-contain sm:w-64 md:w-72"
+          />
           <p className="max-w-md text-sm leading-7 text-white/65">
             Premium TV mounting, wire concealment, soundbar installation, streaming setup, and home theater services throughout South Florida.
           </p>
