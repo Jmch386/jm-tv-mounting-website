@@ -4,12 +4,12 @@ import { brand } from "@/lib/content";
 export function HeaderLogo() {
   return (
     <Image
-      src="/brand/header-words-logo.png"
+      src="/brand/header-logo-wide.png"
       alt={brand.name}
-      width={1035}
-      height={325}
-      sizes="(max-width: 640px) 190px, 260px"
-      className="h-10 w-auto rounded-md object-contain sm:h-12 md:h-14"
+      width={995}
+      height={285}
+      sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 310px"
+      className="h-12 w-auto max-w-[220px] rounded-md object-contain sm:h-14 sm:max-w-[260px] md:h-16 md:max-w-[310px]"
       priority
     />
   );
