@@ -54,7 +54,6 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: brand.name,
   image: "https://jmtvmount.com/brand/jm-tv-logo.png",
-  telephone: brand.phone,
   priceRange: "$$",
   areaServed: localSeoCities.map((city) => city.name),
   serviceType: ["TV Mounting", "Wire Concealment", "In-Wall Wire Concealment", "Home Theater Installation", "Soundbar Installation"],
