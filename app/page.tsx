@@ -1,134 +1,30 @@
-import Image from "next/image";
-import Link from "next/link";
-import { CheckCircle2, Mail, MessageSquare, Phone, Star } from "lucide-react";
-import { CallNowButton } from "@/components/CallNowButton";
-import { HeroBrandVideo } from "@/components/HeroBrandVideo";
-import { HeroInstallImage } from "@/components/HeroInstallImage";
-import { QuoteForm } from "@/components/QuoteForm";
-import { Section } from "@/components/Section";
-import { TextUsButton } from "@/components/TextUsButton";
-import { brand, faqs, gallery, pricing, serviceDetails, testimonials } from "@/lib/content";
-
 export default function HomePage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer
-      }
-    }))
-  };
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <section className="border-b border-white/10 bg-ink">
-        <div className="container-px mx-auto grid max-w-7xl items-center gap-8 py-8 pb-12 md:gap-10 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(420px,560px)] xl:grid-cols-[minmax(0,1fr)_minmax(500px,620px)]">
-          <div className="order-1 mx-auto max-w-3xl text-center md:mx-0 md:text-left">
-            <HeroBrandVideo />
-            <h1 className="headline text-4xl text-white sm:text-5xl md:text-6xl">
-              Professional TV Mounting & Wire Concealment
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/72 md:mx-0 md:text-lg">
-              Clean, secure, perfectly leveled TV installations throughout South Florida.
-            </p>
-            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
-              <CallNowButton className="btn-primary" />
-              <a href="#quote" className="btn-secondary">Get a Free Quote</a>
-            </div>
-            <div className="mt-8 grid gap-3 text-sm font-bold text-white/70 sm:grid-cols-3">
-              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Clean finish</span>
-              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Secure mount</span>
-              <span className="flex items-center justify-center gap-2 md:justify-start"><CheckCircle2 className="text-neon" size={18} /> Hidden wires</span>
-            </div>
-          </div>
-          <div className="order-2 lg:order-2">
-            <HeroInstallImage />
-          </div>
+    <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
+      <div className="max-w-2xl text-center">
+        <div className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-blue-400">
+          JM TV Mounting
         </div>
-      </section>
 
-      <Section eyebrow="Services" title="Simple, clean installation services.">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-          {serviceDetails.map((service) => (
-            <article key={service.title} className="premium-card h-full p-5">
-              <h3 className="font-heading text-3xl text-neon">{service.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-white/68">{service.text}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          Temporarily Closed
+        </h1>
 
-      <section className="section-band">
-        <Section eyebrow="Pricing" title="MODERN INSTALLS WITH CLEAR, UPFRONT PRICING - NO SURPRISE FEES">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {pricing.map((item) => (
-              <article key={item.title} className="premium-card flex h-full flex-col p-5">
-                <h3 className="text-sm font-extrabold text-white/72">{item.title}</h3>
-                <p className="mt-3 font-heading text-5xl text-neon">{item.price}</p>
-                <p className="mt-auto pt-2 text-sm leading-6 text-white/60">{item.note}</p>
-              </article>
-            ))}
-          </div>
-        </Section>
-      </section>
+        <p className="text-lg md:text-xl text-white/70 leading-8">
+          JM TV Mounting is temporarily unavailable and is not currently
+          accepting new appointments.
+        </p>
 
-      <Section eyebrow="Gallery" title="Recent installs.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {gallery.slice(0, 6).map((item) => (
-            <Link key={`${item.category}-${item.title}`} href="/gallery" className="group overflow-hidden rounded-lg border border-white/10 bg-black/35">
-              <Image src={item.thumb} alt={item.title} width={720} height={960} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="aspect-[4/5] w-full object-cover transition duration-200 group-hover:scale-[1.02] sm:aspect-[4/3]" />
-              <div className="p-4">
-                <p className="text-xs font-extrabold uppercase text-neon">{item.category}</p>
-                <p className="mt-1 text-sm text-white/68">{item.title}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </Section>
+        <p className="mt-5 text-base md:text-lg text-white/55">
+          We appreciate your patience and understanding.
+        </p>
 
-      <section className="section-band">
-        <Section eyebrow="Reviews" title="Trusted by local homeowners.">
-          <div className="grid gap-4 md:grid-cols-3">
-            {testimonials.map((review) => (
-              <article key={review.name} className="premium-card p-6">
-                <div className="flex gap-1 text-neon" aria-label="Five star review">
-                  {Array.from({ length: 5 }).map((_, index) => <Star key={index} fill="currentColor" size={18} />)}
-                </div>
-                <p className="mt-5 leading-7 text-white/74">&quot;{review.quote}&quot;</p>
-                <p className="mt-5 text-sm font-extrabold text-white">{review.name} - {review.city}</p>
-              </article>
-            ))}
-          </div>
-        </Section>
-      </section>
+        <div className="mt-10 h-px w-24 mx-auto bg-blue-500" />
 
-      <Section id="faq" eyebrow="FAQ" title="TV mounting questions, answered.">
-        <div className="grid gap-4 md:grid-cols-2">
-          {faqs.map((faq) => (
-            <article key={faq.question} className="premium-card p-6">
-              <h3 className="font-heading text-3xl text-neon">{faq.question}</h3>
-              <p className="mt-3 text-sm leading-7 text-white/68">{faq.answer}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="quote" eyebrow="Quote" title="Request a quote.">
-        <QuoteForm />
-      </Section>
-
-      <Section eyebrow="Contact" title="Call, text, or email.">
-        <div className="grid gap-4 md:grid-cols-3">
-          <CallNowButton className="premium-card block p-6"><Phone className="mb-5 text-neon" /><p className="font-bold">Call Now</p><p className="mt-2 text-white/65">{brand.phone}</p></CallNowButton>
-          <TextUsButton className="premium-card block p-6"><MessageSquare className="mb-5 text-neon" /><p className="font-bold">Text Us</p><p className="mt-2 text-white/65">{brand.phone}</p></TextUsButton>
-          <div className="premium-card p-6"><Mail className="mb-5 text-neon" /><p className="font-bold">Email</p><p className="mt-2 text-white/65">{brand.emailText}</p></div>
-        </div>
-      </Section>
-    </>
+        <p className="mt-8 text-sm text-white/40">
+          Please check back soon.
+        </p>
+      </div>
+    </main>
   );
 }
