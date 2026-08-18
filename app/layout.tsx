@@ -67,12 +67,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-        <Header />
-        <main>{children}</main>
-        <ScrollToTopButton />
-        <FloatingCallButton />
-        <Footer />
-      </body>
-    </html>
+       <main>{children}</main>
+         </body>
+      </html>
   );
 }
